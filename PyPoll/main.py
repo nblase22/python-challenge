@@ -18,7 +18,7 @@ filename = input("Input the name of the data file: ")
 pypoll_csv = os.path.join('Resources', filename)
 
 with open(pypoll_csv, newline="") as csvfile:
-    next(csvfile)
+    next(csvfile, None)
     csvreader = csv.reader(csvfile, delimiter = ",")
 
 
