@@ -17,7 +17,7 @@ filename = input("Input the name of the data file: ")
 pybank_csv = os.path.join('Resources', filename)
 
 with open(pybank_csv, newline="") as csvfile:
-    next(csvfile)
+    next(csvfile, None)
     csvreader = csv.reader(csvfile, delimiter = ",")
 
     #Determine total number of months in the dataset
