@@ -126,8 +126,17 @@ for m in range(0, len(state)):
     state[m] = us_state_abbrev[state[m]]
 
 
+# Write the data to an output file
+output_csv = os.path.join('Output', 'Employee_Data_Output.csv')
+outputFile = open(output_csv, 'w', newline = '')
+outputWriter = csv.writer(outputFile)
 
+outputWriter.writerow(['Emp Id', 'First Name', 'Last Name', 'DOB', 'SSN', 'State'])
 
+for n in range(0, len(first_name)):
+    outputWriter.writerow([emp_id[n], first_name[n], last_name[n], dob[n], ssn[n], state[n]])
+
+outputFile.close()
 
 
 
