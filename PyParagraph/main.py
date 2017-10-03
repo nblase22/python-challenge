@@ -22,6 +22,7 @@ wordCount = len(wordList)
 
 # figure out number of sentences
 sentences = re.split(r' *[\.\?!][\'"\)\]]* *', paragraph)
+num_sentences = len(sentences)
 
 # get average letter count
 word_breakout = []
@@ -39,6 +40,13 @@ for word in flat_breakout:
 
 avg_letter = letterCount / wordCount
 
-
-
 # get average sentence length
+avg_sent_length = wordCount/num_sentences
+
+print()
+print("Paragraph Analysis")
+print("-----------------------------")
+print("Approximate Word Count: " + str(wordCount))
+print("Approximate Sentence Count: " + str(num_sentences))
+print("Average Letter Count: " + str(avg_letter))
+print("Average Sentence Length:  " + str(avg_sent_length))
