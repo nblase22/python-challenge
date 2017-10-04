@@ -34,6 +34,7 @@ for sublist in word_breakout:
     for item in sublist:
         flat_breakout.append(item)
 
+# get the letter count and divide by total word count to get letter/words
 letterCount = 0
 for word in flat_breakout:
     letterCount = letterCount + len(word)
@@ -43,6 +44,7 @@ avg_letter = letterCount / wordCount
 # get average sentence length
 avg_sent_length = wordCount/num_sentences
 
+# print out the final results
 print()
 print("Paragraph Analysis")
 print("-----------------------------")
